@@ -9,6 +9,14 @@ const loadPhone = async (searchText) =>{
 const displayPhones = phones =>{
     const phoneConatainer = document.getElementById('phone-container')
     phoneConatainer.textContent = '';
+    //display show all button if there are more than 12 phones
+      const showAll = document.getElementById('show-all');
+      if(phones.length>12){
+        showAll.classList.remove('hidden')
+      }
+
+    // display only first 12 phones
+    phones = phones.slice(0,12);
     phones.forEach(phone =>{
         console.log(phone)
         const phoneCard = document.createElement('div');
@@ -38,4 +46,5 @@ const handleSearch = () =>{
   console.log(searchText);
   loadPhone(searchText);
 }
+
 // handleSearch();
