@@ -37,14 +37,27 @@ const displayPhones = phones =>{
         `
         phoneConatainer.appendChild(phoneCard);
     })
+    //hide loading spinner
+    toogleSpinner(false)
 }
 
 //handle search bar
 const handleSearch = () =>{
+  toogleSpinner(true);
   const searchField = document.getElementById('search-field');
   const searchText = searchField.value;
   console.log(searchText);
   loadPhone(searchText);
 }
-
 // handleSearch();
+// loading-spinner 
+  const toogleSpinner = (isLoading) =>{
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+      loadingSpinner.classList.remove('hidden')
+    // console.log('ami kisui dekha pain a')
+    }
+    else{
+      loadingSpinner.classList.add('hidden');
+    }
+  }
