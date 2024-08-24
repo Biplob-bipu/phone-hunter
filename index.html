@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,22 @@
     <!-- font awesome -->
 </head>
 <body>
-        
-    <h1>phone huntiong</h1>
-    <div id="phone-container" class=" grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <main class="container mx-auto">   
+    <div class="flex justify-between">
+      <h1 class="text-5xl my-10">Phone Hunting</h1>
+        <div class="flex justify-between my-10 gap-4">
+          <div>
+            <input id="search-field"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered input-primary w-full max-w-xs my-10" />      
+          </div>
+          <div>
+            <button onclick="handleSearch()" class="btn btn-success my-10">Search</button>
+          </div>
+        </div>
+    </div>
+    <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- <div class="card bg-base-100 w-96 shadow-xl">
             <figure>
               <img
@@ -35,7 +48,7 @@
         </div> -->
     </div>
 
-
+  </main>
     <!-- script src  -->
     <script src="js/phone.js"></script>
 </body>
